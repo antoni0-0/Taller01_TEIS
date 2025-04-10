@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&family=Qwitcher+Grypen&family=Sen&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet" />
+
+    <link rel="shortcut icon" href="{% static 'meta/favicons/favicon.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'assets/icons/fontawesome/css/all.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'main_wall.css' %}" />
+
+    <title>Heart.Seed</title>
+</head>
+
+<body>
+    <div class="background-container"></div>
+
+    <header>
+        <div class="encabezado">
+            <div class="logo-container">
+                <img src="{% static 'meta/favicons/logo-heart-seed-color.png' %}" alt="Logo de Heart.Seed" />
+                <h1><b>Heart.</b><b>Seed</b></h1>
+            </div>
+            <div class="buscador">
+                <a href="#"><i id="lupa" class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <a href="{% url 'news' %}?source=pais" class="news-button">Ver noticias de El Pais</a>
+        <a href="{% url 'news' %}?source=bbc" class="news-button">Ver noticias de BBC</a>
+    </main>
+    <footer>
+        <div class="pie-de-pagina">
+            <p>Universidad EAFIT</p>
+            <p>Medellín, Antioquia, Colombia</p>
+            <p>2022-2</p>
+            <p>&copy; Heart.Seed</p>
+        </div>
+    </footer>
+</body>
+
+</html>

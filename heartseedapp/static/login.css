@@ -1,0 +1,136 @@
+* {
+    font-family: 'Sen', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+:root {
+    --main-red: rgb(255, 80, 80);
+    --main-green: rgb(110, 200, 110);
+    --main-gray: rgb(30, 30, 30);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+body .background-container {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right bottom, #00978A, #007D85, #1A6274, #2f4858);
+    background-repeat: no-repeat;
+    background-size: 300%;
+    animation: fanimation 5s infinite;
+    background-attachment: fixed;
+    position: fixed;
+    z-index: -1;
+}
+
+@keyframes fanimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    width: 240px;
+}
+
+.logo-container img {
+    max-width: 60px;
+    max-height: 40px;
+    filter: drop-shadow(5px 5px 10px #000);
+}
+
+.logo-container h1 {
+    font-weight: bold;
+    filter: drop-shadow(5px 5px 10px #000);
+    color: #fff;
+    padding: 5px;
+    font-size: 26px;
+}
+
+body form h2{
+    color: #EEE;
+    font-size: 25px;
+}
+body form h3{
+    color: #DDD;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+form label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ccc;
+    padding: 5px;
+    height: 40px;
+    margin-bottom: 20px;
+    width: 80vw;
+}
+
+
+#username, #password{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    height: 40px;
+    outline: none;
+}
+
+form .fa-solid{
+    color: #1A6274;
+    margin: 0 15px 0 5px;
+}
+
+form input[type=submit]{
+    width: 40vw;
+    height: 40px;
+    background-color: #333;
+    border: none;
+    color: #DDD;
+    font-weight: bold;
+    font-size: 15px;
+}
+@media only screen and (min-width: 735px) {
+    form label{
+        width: 400px;
+    }
+
+    form input[type=submit]{
+        width: 300px;
+    }
+}

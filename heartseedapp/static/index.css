@@ -1,0 +1,698 @@
+* {
+    font-family: 'Sen', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+:root {
+    --main-red: rgb(255, 80, 80);
+    --main-green: rgb(110, 200, 110);
+    --main-gray: #262626;
+}
+
+header {
+    background-color: var(--main-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 8vh;
+    background-color: #000;
+}
+
+header .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.logo-container img {
+    max-width: 60px;
+    max-height: 40px;
+}
+
+.logo-container h1 {
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+header nav,
+header ul,
+nav li {
+    height: 100%;
+    width: 70px;
+    padding: 0;
+}
+
+header .responsive-bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+    background-color: var(--main-red);
+    transition: background-color 1s, color 1s;
+    cursor: pointer;
+}
+
+header .responsive-bars i {
+    color: #fff;
+}
+
+header .nav-item {
+    display: none;
+}
+
+header .nav-container i,
+#login-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    transition: color 1s;
+}
+
+header .responsive-bars:hover {
+    background-color: var(--main-green);
+}
+
+header .responsive-bars:hover>i {
+    color: #000;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-container {
+    background-image: linear-gradient(0deg, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("images/excursionista.webp");
+    height: 92vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-weight: bold;
+    color: #ddd;
+    text-align: center;
+    font-size: 10vw;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-weight: bold;
+    color: #ccc;
+    text-align: center;
+    font-size: 5vw;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 4px 4px 10px #000;
+    background: var(--main-gray);
+    color: #eee;
+    margin: 10px;
+    transition: background-color 1s, color 1s;
+    cursor: pointer;
+}
+
+.hero button:first-child:hover {
+    background-color: var(--main-green);
+    color: #000;
+}
+
+.hero button:nth-child(2):hover {
+    background-color: var(--main-red);
+    color: #000;
+}
+
+.sobre-nosotros {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.sobre-nosotros h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    z-index: 100;
+    height: 10vh;
+}
+
+.sobre-nosotros h2 b:first-child {
+    color: var(--main-red);
+    margin-left: 5px;
+}
+
+.sobre-nosotros h2 b:nth-child(2) {
+    color: var(--main-green);
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.8)), url("images/friendship.webp");
+    height: 90vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+.presentacion h3 {
+    background-color: var(--main-gray);
+    color: #fff;
+    margin: 0px;
+    font-size: 5vw;
+    margin-top: 50px;
+    padding: 10px;
+    align-self: flex-start;
+    justify-self: flex-start;
+    z-index: 100;
+}
+
+.presentacion p {
+    color: #fff;
+    margin: 20px 10px;
+    margin-top: -20px;
+    border-radius: 10px;
+    padding: 40px 30px;
+    background-image: linear-gradient(to bottom, transparent, rgb(153, 170, 153, 0.7));
+    font-size: 1em;
+    text-align: center;
+}
+
+.presentacion .img-container {
+    height: 30vh;
+    width: 70vw;
+    background-image: url("images/friendship.webp");
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
+    filter: brightness(0.8);
+}
+
+.nuestra-comunidad {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.8)), url("images/comunidad.webp");
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+.nuestra-comunidad h3 {
+    background-color: #000;
+    color: #fff;
+    margin: 0px;
+    font-size: 7vw;
+    margin-top: 50px;
+    padding: 10px;
+    align-self: flex-start;
+    justify-self: flex-start;
+    z-index: 100;
+}
+
+.nuestra-comunidad p {
+    color: #fff;
+    margin: 20px 10px;
+    margin-top: -20px;
+    border-radius: 10px;
+    padding: 40px 30px;
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.7));
+    font-size: 1em;
+    text-align: center;
+}
+
+.nuestra-comunidad h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    text-align: center;
+    font-size: 1.5em;
+    height: 30vh;
+    width: 70vw;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("images/comunidad.webp");
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
+    box-shadow: 7px 7px 20px #333;
+}
+
+.nuestra-comunidad h4 b {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.vision {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.8)), url("images/vision.webp");
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+.vision img {
+    width: 130px;
+    height: 110px;
+    align-self: center;
+    margin-top: 20px;
+    filter: drop-shadow(5px 5px 10px #000);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.vision h3 {
+    background-color: var(--main-gray);
+    color: #fff;
+    margin: 0px;
+    font-size: 7vw;
+    margin-top: 20px;
+    padding: 10px;
+    align-self: flex-start;
+    justify-self: flex-start;
+    z-index: 100;
+    width: 30vw;
+}
+
+.vision p {
+    color: #fff;
+    margin: 20px 10px;
+    margin-top: -20px;
+    border: 3px #000 solid;
+    border-radius: 10px;
+    padding: 30px 10px;
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.7));
+    font-size: 1em;
+    text-align: center;
+}
+
+.vision h4 {
+    font-size: 10vw;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.vision b:first-child {
+    color: var(--main-red);
+}
+
+.vision b:nth-child(2) {
+    color: var(--main-green);
+}
+
+.objetivos {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)), url("images/desarrollo.webp");
+    height: 100vh;
+    background-position: right;
+    background-size: cover;
+}
+
+.objetivos h3 {
+    background-color: #000;
+    color: #fff;
+    margin: 0px;
+    font-size: 5vw;
+    margin-top: 50px;
+    padding: 10px;
+    align-self: flex-start;
+    justify-self: flex-start;
+    z-index: 100;
+}
+
+.objetivos p {
+    color: #fff;
+    margin: 20px 10px;
+    margin-top: -20px;
+    border: 3px #000 solid;
+    border-radius: 10px;
+    padding: 40px 30px;
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.5));
+    font-size: 1em;
+    text-align: center;
+}
+
+.objetivo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.objetivos .objetivo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 44vw;
+    height: 40%;
+    margin: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #000;
+}
+
+.objetivos .objetivo:first-child {
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.8)), url("images/animalismo.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.objetivos .objetivo:nth-child(2) {
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.8)), url("images/ecologia.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.objetivos .objetivo:nth-child(3) {
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.8)), url("images/social.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.objetivos .objetivo:nth-child(4) {
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.8)), url("images/educacion.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.objetivo h4 {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.objetivos h3 b:first-child {
+    color: var(--main-red);
+}
+
+.objetivos h3 b:nth-child(2) {
+    color: var(--main-green);
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #000;
+}
+
+.final h2 {
+    color: var(--main-green);
+    font-size: 9vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.final button {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 6px 6px 10px #555;
+    margin: 10px;
+    background-color: var(--main-gray);
+    color: #fff;
+    transition: background-color 1s, color 1s;
+    cursor: pointer;
+}
+
+.final button:first-child:hover {
+    background-color: var(--main-green);
+    color: #000;
+}
+
+.final button:nth-child(2):hover {
+    background-color: var(--main-red);
+    color: #000;
+}
+
+.final .contactanos {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid var(--main-gray);
+    padding: 20px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.final .contactanos * {
+    color: #fff;
+    text-decoration: none;
+}
+
+.final .contactanos h2 {
+    color: var(--main-red);
+}
+
+.final .contactanos li {
+    margin: 5px;
+}
+
+footer {
+    background-color: #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--main-gray);
+}
+
+footer .pie-de-pagina {
+    margin: 15px;
+}
+
+footer p {
+    color: #fff;
+    text-align: end;
+}
+
+@media only screen and (min-width: 735px) {
+    body .background-container {
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(to right bottom, #6EC86E, #29B181, #00978A, #007D85, #1A6274, #2F4858);
+        background-repeat: no-repeat;
+        background-size: 500%;
+        animation: fanimation 3s infinite;
+        background-attachment: fixed;
+        position: fixed;
+        z-index: -1;
+    }
+    
+    @keyframes fanimation {
+        0% {
+            background-position: 0% 50%;
+        }
+    
+        50% {
+            background-position: 100% 50%;
+        }
+    
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    header {
+        height: 90px;
+    }
+
+    .hero .hero-container {
+        height: calc(100vh - 90px);
+    }
+
+    header .logo-container {
+        flex-direction: column;
+        width: 200px;
+        flex-grow: 0;
+        justify-content: flex-end;
+    }
+
+    header .logo-container h1 {
+        padding: 0px 5px;
+    }
+
+    header .responsive-bars {
+        display: none;
+    }
+
+    header .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 70%;
+        padding: 0;
+    }
+
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+    }
+
+    header .nav-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+        color: #fff;
+        margin: 0px 15px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    header .nav-item:hover {
+        color: var(--main-green);
+    }
+
+    .hero .hero-container {
+        height: calc(100vh - 90px);
+        padding: 40px;
+    }
+
+    .hero h2 {
+        font-size: 5vw;
+    }
+
+    .hero p {
+        font-size: 3vw;
+    }
+
+    .hero button {
+        font-size: 18px;
+    }
+
+    .sobre-nosotros {
+        justify-content: space-evenly;
+    }
+
+    .sobre-nosotros h2 {
+        padding: 20px;
+        height: 90px;
+        font-size: 80px;
+        width: 100vw;
+    }
+
+    .presentacion,
+    .nuestra-comunidad {
+        width: 48vw;
+        height: calc(100vh - 90px);
+        margin-top: 20px;
+        box-shadow: 10px 10px 20px #000;
+    }
+
+    .vision,
+    .objetivos {
+        width: 48vw;
+        height: 100vh;
+        margin: 20px 0px;
+        box-shadow: 10px 10px 20px #000;
+    }
+
+    .sobre-nosotros {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .presentacion h3,
+    .nuestra-comunidad h3,
+    .vision h3,
+    .objetivos h3 {
+        font-size: 3vw;
+    }
+
+    .presentacion .img-container,
+    .nuestra-comunidad h4 {
+        width: 30vw;
+    }
+
+    .vision h4 {
+        font-size: 60px;
+    }
+
+    .objetivos .objetivo {
+        width: 20vw;
+    }
+
+    .final {
+        height: 85vh;
+        padding: 90px;
+        width: 97.5vw;
+        margin-bottom: 20px;
+        box-shadow: 10px 10px 20px #000;
+    }
+
+    .final h2 {
+        font-size: 60px;
+    }
+
+    .final button {
+        font-size: 18px;
+    }
+
+    .contactanos h2 {
+        font-size: 40px;
+    }
+
+    footer {
+        height: 15vh;
+    }
+}

@@ -1,0 +1,128 @@
+{# templates/index.html #}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'meta/favicons/favicon.png' %}" type="image/x-icon" sizes="180x180">
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&family=Qwitcher+Grypen&family=Sen&family=Shadows+Into+Light&display=swap">
+    <link rel="stylesheet" href="{% static 'assets/icons/fontawesome/css/all.css' %}">
+    <title>Heart.Seed</title>
+</head>
+
+<body>
+    <div class="background-container"></div>
+    <header>
+        <div class="logo-container">
+            <img src="{% static 'meta/favicons/logo-heart-seed.png' %}" alt="Logo de Heart.Seed">
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <h2>Recuerda ser el cambio que quieres ver en el mundo</h2>
+                <p>¡Únete a Heart.Seed hoy!</p>
+                <form action="{% url 'mainwall' %}">
+                    <button id="inicia-sesion">Noticias Ambientales</button>
+                </form>
+            </div>
+        </section>
+        <section class="sobre-nosotros-container" id="sobre-nosotros-id">
+            <div class="sobre-nosotros">
+                <h2>Sobre <b>Heart.</b><b>Seed</b></h2>
+                <div class="presentacion">
+                    <h3>¿Qué es Heart.Seed?</h3>
+                    <p>Heart.Seed es una red social que tiene como propósito conectar personas e integrar grupos
+                        interesados en la realización labores que aporten al desarrollo sostenible, por medio de la
+                        planeación de eventos, creación de grupos e intercambio de información. Con el objetivo de
+                        incentivar y facilitar la realización de actividades y acceso a la información que tenga un
+                        impacto positivo en la sociedad.</p>
+                    <div class="img-container"></div>
+                </div>
+                <div class="nuestra-comunidad">
+                    <h3><b>Nuestra</b> <b>comunidad</b></h3>
+                    <p>¡Unete a nosotros! Heart.Seed es una comunidad en constante crecimiento, conformada por todas
+                        aquellas personas que desean generar un cambio en su entorno, su ciudad, su país y el mundo.
+                        ¿Deseas plantar especies en peligro? seguro que aquí encuentras a alguien que también, ¿deseas
+                        promover una jornada de vacunación? en Heart.Seed hay muchos usuarios que te pueden apoyar,
+                        ¿reciclaje y reutilización como estilo de vida? este es el lugar. Sé parte de Heart.Seed hoy y
+                        haz del mundo el lugar que deseas para todos ¡en compañía!</p>
+                    <h4>¡Nuestra comunidad tiene <b>1.893</b> integrantes actualmente!</h4>
+                </div>
+                <div class="vision">
+                    <img src="{% static 'meta/favicons/logo-heart-seed-color.png' %}" alt="Logo de Heart.Seed">
+                    <h3>Visión</h3>
+                    <p>Heart.Seed es una plataforma social que permitirá la organización de grupos, eventos, contratos
+                        sociales y patrocinadores que logren desarrollar de manera eficiente actividades y encuentros
+                        entre personas que busquen realizar voluntariados y labores sociales de diferentes tipos; al
+                        mismo tiempo, utiliza herramientas de procesamiento de datos para su posterior análisis
+                        estadistico, que propicie información diversa con el objetivo de conocer más sobre el
+                        comportamiento de sus usuarios y el impacto de las labores realizadas.</p>
+                    <h4><b>Heart.</b><b>Seed</b></h4>
+                    <div class="img-container"></div>
+                </div>
+                <div class="objetivos">
+                    <h3>Objetivos de <b>Heart.</b><b>Seed</b></h3>
+                    <p>Vivimos en tiempos difíciles y somos los seres humanos quienes tenemos la respondabilidad de
+                        cambiar eso. En Heart.Seed buscamos generar un impacto positivo en el mundo y es por esta razón
+                        que hemos planteado cuatro objetivos principales que hacen de la vida sostenible una meta
+                        posible de lograr.</p>
+                    <div class="objetivo-container">
+                        <div class="objetivo animalismo">
+                            <h4>Animalismo</h4>
+                        </div>
+                        <div class="objetivo ecologia">
+                            <h4>Ecología</h4>
+                        </div>
+                        <div class="objetivo justicia">
+                            <h4>Justicia Social</h4>
+                        </div>
+                        <div class="objetivo educacion">
+                            <h4>Educación</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="final" id="final">
+            <h2>¿Qué esperas para cambiar el mundo?</h2>
+            <form action="{% url 'mainwall' %}">
+                <button id="inicia-sesion1">Noticias Ambientales</button>
+            </form>
+            <section class="contactanos">
+                <h2>¡Contáctanos!</h2>
+                <div class="creadores">
+                    <ul>
+                        <li>
+                            <p>Antonio Carbonó Pedroza</p>
+                            <a href="mailto:hacarbonop@eafit.edu.co">hacarbonop@eafit.edu.co</a>
+                        </li>
+                        <li>
+                            <p>David González Idárraga</p>
+                            <a href="mailto:dgonzalezi@eafit.edu.co">dgonzalezi@eafit.edu.co</a>
+                        </li>
+                        <li>
+                            <p>María José González Peláez</p>
+                            <a href="mailto:mjgonzalep@eafit.edu.co">mjgonzalep@eafit.edu.co</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="pie-de-pagina">
+            <p>Universidad EAFIT</p>
+            <p>Medellín, Antioquia, Colombia</p>
+            <p>2022-2</p>
+            <p>&copy; Heart.Seed</p>
+        </div>
+    </footer>
+</body>
+
+</html>
