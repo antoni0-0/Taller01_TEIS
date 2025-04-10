@@ -36,7 +36,7 @@ Como parte central del taller, desarrollamos una funcionalidad de web scraping q
 * Sistema de login inseguro (PHP sin cifrado).
 
 #### Evidencia de estructura del proyecto anterior
-![Estructura](heartseed-structure.png)
+![Estructura](evidences/heartseed-structure.png)
 
 ### Actividad 3: Inversión de dependencias
 En la funcionalidad de web scraping aplicamos el principio de inversión de dependencias al desacoplar la lógica de obtención de noticias de su uso en las vistas. Para lograrlo, definimos una interfaz `NewsScraper` que representa el comportamiento común de todos los scrapers, y las clases concretas como `BBCScraper` o `PaisScraper` implementan esa interfaz. De esta manera, las vistas trabajan sobre la abstracción y no sobre implementaciones específicas, permitiendo mayor flexibilidad, escalabilidad y facilidad de pruebas.
@@ -51,3 +51,13 @@ Se aplicó el patrón CBV al usar `TemplateView` para renderizar las páginas pr
 #### Funcionalidad Nueva: Web Scraping
 Dado que el proyecto base presentaba una arquitectura muy deficiente y una mezcla poco mantenible de tecnologías (PHP y Python), migrar sus funcionalidades principales a Django resultaba complejo y poco eficiente. Por esta razón, se decidió desarrollar desde cero una nueva funcionalidad de web scraping, la cual permitió aplicar correctamente los principios y patrones exigidos en el taller dentro de un entorno controlado, limpio y alineado con las buenas prácticas del framework.
 
+### Funcionalidades corriendo
+#### Página principal
+![Hero](evidences/1.png)
+![Sección](evidences/2.png)
+#### Selección de fuente
+![](evidences/3.png)
+#### Noticias extraídas de El País
+![](evidences/4.png)
+#### Noticias extraídas de BBC
+![](evidences/5.png)

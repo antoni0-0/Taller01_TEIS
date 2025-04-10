@@ -1,0 +1,9 @@
+Para correr localmente este proyecto basta con instalar la librería bs4 de Python por medio de pip con el siguiente comando:
+
+pip install bs4
+
+Para correr el servidor se utiliza el comando:
+
+python manage.py runserver
+
+Al acceder a la vista inicial ('/'), podrá ver en el Hero el botón Ver Noticias, y al acceder a este se puede seleccionar la fuente de noticias ambientales que desee.
